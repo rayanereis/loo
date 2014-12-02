@@ -4,6 +4,9 @@ from pessoa import Pessoa
 
 
 class PessoaSpec(unittest.TestCase):
+	def test_aaa(self):
+		p = Pessoa('t')
+
 	def test_criar_pessoa(self):
 		p = Pessoa('joao')
 		p.nome |should| equal_to('joao')
