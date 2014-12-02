@@ -4,9 +4,14 @@ from pessoa import Pessoa
 
 
 class PessoaSpec(unittest.TestCase):
-	def test_criar_pessoa(self):
+	def setUp(self):
 		Pessoa.pessoas = {}
 		Pessoa.contador_id = 0
+
+	def tearDown(self):
+		pass
+
+	def test_criar_pessoa(self):
 		p = Pessoa('joao', 'rua dos bobos')
 		p.nome |should| equal_to('joao')
 		p.endereco |should| equal_to('rua dos bobos')
