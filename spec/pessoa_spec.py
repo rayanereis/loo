@@ -17,6 +17,8 @@ class PessoaSpec(unittest.TestCase):
 		p.endereco |should| equal_to('rua dos bobos')
 		p.id |should| equal_to(1)
 		Pessoa.pessoas[1] |should| equal_to(p)
+		#alternativa aa expectativa anterior
+		Pessoa.pessoas |should| include_values(p)
 
 	def test_alterar_endereco(self):
 		p = Pessoa('joao', 'rua dos bobos')
