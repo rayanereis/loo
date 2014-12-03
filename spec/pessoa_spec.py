@@ -2,7 +2,6 @@ import unittest
 from should_dsl import should
 from pessoa import Pessoa
 
-
 class PessoaSpec(unittest.TestCase):
 
 	def setUp(self):
@@ -30,5 +29,4 @@ class PessoaSpec(unittest.TestCase):
 	def test_alterar_estado_civil(self):
 		self.p.alterar_estado_civil('casado')
 		self.p.estado_civil |should| equal_to('casado')
-
 
