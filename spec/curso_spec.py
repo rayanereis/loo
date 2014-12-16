@@ -7,3 +7,5 @@ class CursoSpec(unittest.TestCase):
 		c = Curso('Arquitetura')
 		c.nome |should| equal_to('Arquitetura')
 
+	
+

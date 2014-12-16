@@ -24,3 +24,4 @@ class Aluno(Pessoa):
 
 	def matricular(self, curso):
 		self.curso = curso
+		curso.matricular_aluno(self)
