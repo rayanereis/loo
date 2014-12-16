@@ -10,12 +10,17 @@ class AlunoSpec(unittest.TestCase):
 		self.a = Aluno('joao', 'rua dos bobos','enrolado')
 
 	#Construtor
-	def test_atribui_matricula(self):
+	def test_atribuir_matricula(self):
 		self.a.matricula |should| equal_to(1)
 
-	def test_armazena_instancia(self):
+	def test_armazenar_instancia(self):
 		Aluno.alunos |should| include_values(self.a)
-
 	#/Construtor
 	
+	def test_associar_responsavel(self):
+		from pessoa import Pessoa
+
+		responsavel = Pessoa('Maria', 'rua das coves', 'casada')
+		self.a.associar_responsavel(responsavel)
+		self.a.responsavel |should| equal_to(responsavel)
 
