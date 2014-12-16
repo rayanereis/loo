@@ -22,5 +22,13 @@ class AlunoSpec(unittest.TestCase):
 
 		responsavel = Pessoa('Maria', 'rua das coves', 'casada')
 		self.a.associar_responsavel(responsavel)
-		self.a.responsavel |should| equal_to(responsavel)
+		self.a.responsavel |should| be(responsavel)
+
+	def test_matricular(self):
+		from curso import Curso
+
+		curso = Curso('Informatica')
+		self.a.matricular(curso)
+		self.a.curso |should| be(curso)
+		curso.alunos |should| include_values(self.a)
 
