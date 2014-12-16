@@ -30,5 +30,5 @@ class AlunoSpec(unittest.TestCase):
 		curso = Curso('Informatica')
 		self.a.matricular(curso)
 		self.a.curso |should| be(curso)
-		curso.alunos |should| include_values(self.a)
+		#curso.alunos |should| include_values(self.a)
 

@@ -21,3 +21,6 @@ class Aluno(Pessoa):
 
 	def associar_responsavel(self, responsavel):
 		self.responsavel = responsavel
+
+	def matricular(self, curso):
+		self.curso = curso
